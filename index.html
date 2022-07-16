@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ebay Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet">
+    
+    
+    <!-- Style -->
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <style>
+    /* 
+.navbar-expand-lg .navbar-collapse {
+    display: flex!important;
+    flex-basis: auto;
+    text-align: center;
+    justify-content: center;
+} */
+a.navbar-brand>img {
+    width: 217px !important;
+}
+.container-fluid.shipping {
+    background-color: #CCCCCC;
+}
+img.banner {
+  height: 100%;
+  width: 100;
+}
+body {
+    font-family: Arial;
+    margin: 0;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  img {
+    vertical-align: middle;
+  }
+  
+  /* Position the image container (needed to position the left and right arrows) */
+  .product {
+    position: relative;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  .column {
+    width: 16% !important;
+}
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  a.first-btn {
+    padding: 14px 184px;
+    border: 2px solid #000;
+    color: #000;
+    text-align: center;
+}
+a.second-btn {
+    padding: 14px 170px;
+    border: 2px solid #B21E23;
+    color: #fff;
+    text-align: center;
+    background-color: #B21E23;
+    position: relative;
+    /* top: 14px; */
+}
+a.third-btn {
+    padding: 14px 160px;
+    border: 2px solid #F9BF3B;
+    color: #000;
+    text-align: center;
+    background-color: #F9BF3B;
+    position: relative;
+    top: 14px;
+}
+.tab {
+    overflow: hidden;
+    border: 0px solid #ccc;
+    background-color: #fff;
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #fff;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #ccc;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 0px solid #ccc;
+    border-top: none;
+  }
+  .container.Newsletter {
+    background-color: #CCCCCC;
+    padding: 24px 48px;
+
+  }
+  .caption-container {
+    display: none;
+}
+@media only screen and (max-width: 600px) {
+    a.first-btn {
+        padding: 11px 112px;
+        border: 2px solid #000;
+        color: #000;
+        text-align: center;
+    }
+    a.second-btn {
+        padding: 11px 97px;
+        border: 2px solid #B21E23;
+        color: #fff;
+        text-align: center;
+        background-color: #B21E23;
+        position: relative;
+        /* top: 14px; */
+    }
+    a.third-btn {
+        padding: 11px 90px;
+        border: 2px solid #F9BF3B;
+        color: #000;
+        text-align: center;
+        background-color: #F9BF3B;
+        position: relative;
+        top: 14px;
+    }
+    .col-sm-3 {
+        padding: 14px;
+    }
+    .col-sm-8 {
+        padding: 11px;
+    }
+    .Dekstop-logo {
+      display: none;
+}
+.logo {
+    display: block;
+}
+button.navbar-toggler {
+    background-color: #9b9b9b;
+}
+}
+@media (min-width: 992px){
+.navbar-expand-lg .navbar-collapse {
+    display: flex!important;
+    flex-basis: auto;
+    justify-content: center;
+}
+.Dekstop-logo {
+    text-align: center;
+}
+.logo {
+    display: none;
+}
+}
+  
+  </style>
+  <body>
+    <div class="Dekstop-logo">
+      <br>
+      <a class="navbar-brand" href="https://www.ebay.co.uk/str/topnotchdenim"><img src="https://imgur.com/v6pRSUY.jpg"></a>
+      <br>
+      </div>
+    <nav class="navbar navbar-expand-lg bg-light">
+      
+        <div class="container">
+          <div class="logo">
+            
+          <!-- <a class="navbar-brand" href="/"><img src="https://imgur.com/v6pRSUY.jpg"></a> -->
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="https://www.ebay.co.uk/str/topnotchdenim">VISIT STORE</a>
+              <a class="nav-link" href="https://www.ebay.co.uk/str/topnotchdenim?_sop=10">NEW IN</a>
+              <a class="nav-link" href="https://www.ebay.co.uk/str/topnotchdenim/Women/_i.html?_sacat=260010">WOMEN</a>
+              <a class="nav-link" href="https://www.ebay.co.uk/str/topnotchdenim/Men/_i.html?_sacat=260012">MEN</a>
+              <a class="nav-link" href="https://www.ebay.co.uk/str/topnotchdenim#tab2">FEEDBACK</a>
+              <a class="nav-link" href="https://www.ebay.co.uk/str/topnotchdenim#tab1">RETURNS</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="container-fluid shipping">
+        <div class="row">
+          <div class="col-sm-4">
+            <h2 style="text-align: center;font-size:22px">Free UK Standard Delivery</h2>
+          </div>
+          <div class="col-sm-4">
+            <h2 style="text-align: center;font-size:22px">Most Orders Dispatched Within 1 Day</h2>
+          </div>
+          <div class="col-sm-4">
+            <h2 style="text-align: center;font-size:22px">30 Day Money Back Guarantee
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-4">
+            <a href="https://www.ebay.co.uk/str/topnotchdenim"><img src="https://imgur.com/o1mlugI.jpg" class="banner" width="310%"></a>
+
+          </div>
+          <!-- <div class="col-sm-4">
+            <a href="https://www.ebay.co.uk/str/topnotchdenim/Clothes-Shoes-Accessories/_i.html?_sacat=11450&_sop=10"><img src="https://imgur.com/Z9Gh7T8.jpg" class="banner"/></a>
+
+          </div>
+          <div class="col-sm-4">
+            <a href="https://www.ebay.co.uk/str/topnotchdenim"><img src="https://imgur.com/dLtQ1lL.jpg" class="banner"/></a> -->
+
+          <!-- </div> -->
+        </div>
+      </div>
+      <br><br>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6"><div class="container product">
+            <div class="mySlides">
+              <div class="numbertext">1 / 6</div>
+              <img src="https://imgur.com/QZZJSID.jpg" style="width:100%">
+            </div>
+          
+            <div class="mySlides">
+              <div class="numbertext">2 / 6</div>
+              <img src="https://imgur.com/Cx6tdoz.jpg" style="width:100%">
+            </div>
+          
+            <div class="mySlides">
+              <div class="numbertext">3 / 6</div>
+              <img src="https://imgur.com/mSO5g8P.jpg" style="width:100%">
+            </div>
+              
+            <div class="mySlides">
+              <div class="numbertext">4 / 6</div>
+              <img src="https://imgur.com/VTsZr9Y.jpg" style="width:100%">
+            </div>
+          
+            <div class="mySlides">
+              <div class="numbertext">5 / 6</div>
+              <img src="https://imgur.com/QZZJSID.jpg" style="width:100%">
+            </div>
+              
+            <div class="mySlides">
+              <div class="numbertext">6 / 6</div>
+              <img src="https://imgur.com/Cx6tdoz.jpg" style="width:100%">
+            </div>
+              
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+          
+            <div class="caption-container">
+              <p id="caption"></p>
+            </div>
+          
+            <div class="row">
+              <div class="column">
+                <img class="demo cursor" src="https://imgur.com/QZZJSID.jpg" style="width:80%" onclick="currentSlide(1)" alt="Denim">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="https://imgur.com/Cx6tdoz.jpg" style="width:80%" onclick="currentSlide(2)" alt="Denim">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="https://imgur.com/mSO5g8P.jpg" style="width:80%" onclick="currentSlide(3)" alt="Denim">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="https://imgur.com/VTsZr9Y.jpg" style="width:80%" onclick="currentSlide(4)" alt="Denim">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="https://imgur.com/QZZJSID.jpg" style="width:80%" onclick="currentSlide(5)" alt="Denim">
+              </div>    
+              <div class="column">
+                <img class="demo cursor" src="https://imgur.com/Cx6tdoz.jpg" style="width:80%" onclick="currentSlide(6)" alt="Denim">
+              </div>
+            </div>
+          </div></div>
+          <div class="col-sm-6">
+            <h3 class="product-title">Womens Denim Jeans Jacket Mid Blue Wash Track Stitch Ladies Coat Size 6 - 20</h3>
+            <br>
+            <a href="https://www.ebay.co.uk/cnt/FindAnswers?ShowSellerFAQ=&item_id=224502347725&requested=topnotchdenim&redirect=0&frm=284&rt=nc&ssPageName=PageSellerM2MFAQ_VI&_trksid=p2047675.m3561.l1499&_caprdt=1" class="first-btn">Ask A Question</a><br><br><br>
+            <a href="https://www.ebay.co.uk/str/topnotchdenim" class="second-btn">Visit Our Ebay Store</a><br><br>
+            <a href="https://www.ebay.co.uk/str/topnotchdenim" class="third-btn">Add to Favourite Seller</a><br><br><br>
+            <strong>Availiblility : </strong> <strong style="color:green">In Stock</strong><br><br>
+            <img src="data:image/png;base64,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" alt="" width="120" height="70"> <span>Over 6,700 happy Customers & counting!</span><br><br>
+            <div class="row" style="border-top:1px solid #000 ;border-bottom:1px solid #000">
+              <div class="col-sm-6" style="margin-top: 10px;">
+                <h5>Free UK Standard Delivery
+                </h5>
+                <p>Most Orders Dispatched Within 1 Day
+                </p>
+              </div>
+              <div class="col-sm-6">
+                <img src="https://imgur.com/U2tqC1A.jpg" alt="Royal Mail" width="200" height="80">
+              </div>
+            </div>
+            <div class="row" style="border-top:1px solid #000 ;border-bottom:1px solid #000">
+              <div class="col-sm-6"  style="margin-top: 10px;">
+                <h5>Safe And Secure Payment
+
+                </h5>
+                <p>Shop with confidence using eBay Payments
+
+
+                </p>
+              </div>
+              <div class="col-sm-6">
+                <img src="https://imgur.com/Z6u5qcZ.jpg" alt="eBay" width="230" height="90">
+              </div>
+              
+            </div>
+           
+            
+
+
+          </div>
+        </div>
+      </div>
+<!-- /*Product Tabs  -->
+<br><br>
+      <div class="container">
+        <div class="tab">
+          <button class="tablinks" onclick="openCity(event, 'London')">Product Description</button>
+          <button class="tablinks" onclick="openCity(event, 'Paris')">Returns</button>
+          <button class="tablinks" onclick="openCity(event, 'Tokyo')">Shipping</button>
+          
+        </div>
+        
+        <div id="London" class="tabcontent">
+          <h3>Product Description</h3> <br>
+          <h4>MADE WITH EXCELLENT QUALITY DENIM FABRIC </h4>
+       
+
+            <li>EXCELLENT QUALITY DENIM SHIRT DRESS</li>
+            <li>FROM JM BRANDS LONDON</li>
+            <li>MID WEIGHT</li>
+            <li>LONG SLEEVES</li>
+            <li>WITH A RANGE OF COLOUR</li>
+            <li>MADE WITH EXCELLENT QUALITY DENIM FABRIC</li>
+            <br>
+            <p>Smart, stylish, Very Comfortable & cool look for all season with key features of long sleeves, soft material, regular fitting, Collared Neck, Chest Pockets, the ultimate in casual and comfortable clothing, these fabulous Denim Jacket are made with finest fibres for comfy softness and are conveniently machine washable.</p>
+        </div>
+        
+        
+        <div id="Paris" class="tabcontent">
+          <h3>Returns</h3>
+          <p>In the case that you are not satisfied with your purchase, you have 30 days in which to request a refund. All requests after this cannot be accepted.  Any exchange of items must be done so with the item purchased in its original packing and in sellable condition.  All fault and defect item claims must be done within 10 days, with proof of defect sent by email.  The customer is liable to pay for the return postage. (Unless item is approved as defect).</p> 
+        </div>
+        
+        <div id="Tokyo" class="tabcontent">
+          <h3>Shipping</h3>
+          <li>Free Postage Within UK -2ND Class (Royal Mail).</li>
+          <li>For Europe USA and Canada 3-6 days Postal Service.</li>
+          <li>For rest of world please inbox us for delivery times.</li>
+          <li>We dispatch all our orders on same day if paid before 1:00 pm.</li>
+          <li>Saturday/Sunday orders will be dispatch on Monday.</li>
+          <li>Next day guaranteed delivery is available at extra cost.</li>
+        </div>
+       </div>
+      <br><br>
+          <h3 class="men" style="text-align:center ;">MEN'S WEAR</h3> <br>
+     <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <a href="https://www.ebay.co.uk/itm/325201018803"><img src="https://imgur.com/fli0FhT.jpg" width="226px" height="340px"></a>
+        </div>
+        <div class="col-sm-4">
+          <a href="https://www.ebay.co.uk/itm/325249220501"><img src="https://imgur.com/o7XzN9g.jpg" width="226px" height="340px"></a>
+        </div>
+        <div class="col-sm-4">
+          <a href="https://www.ebay.co.uk/itm/224161603612"><img src="https://imgur.com/rrsKb9g.jpg" width="226px" height="340px"></a>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-sm-4">
+          <a href="https://www.ebay.co.uk/itm/325248315312"><img src="https://imgur.com/3ztFm41.jpg" width="226px" height="340px"></a>
+        </div>
+        <div class="col-sm-4">
+          <a href="https://www.ebay.co.uk/itm/324754339199"><img src="https://imgur.com/vLvVZds.jpg" width="226px" height="340px"></a>
+        </div>
+        <div class="col-sm-4">
+          <a href="https://www.ebay.co.uk/itm/324791780850"><img src="https://imgur.com/WgopkDb.jpg" width="226px" height="340px"></a>
+        </div>
+      </div>
+     </div>
+
+     <br><br>
+          <h3 class="men" style="text-align:center ;">WOMEN'S WEAR</h3>
+     <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+         <a href="https://www.ebay.co.uk/itm/324767138313"> <img src="https://imgur.com/sg68U0k.jpg" width="226px" height="340px"></a>
+        </div>
+        <div class="col-sm-4">
+          <a href="https://www.ebay.co.uk/itm/324696904276"> <img src="https://imgur.com/FE7wiu1.jpg" width="226px" height="340px"></a>
+        </div>
+        <div class="col-sm-4">
+          <a href="https://www.ebay.co.uk/itm/223981608041"> <img src="https://imgur.com/d4OEN5U.jpg" width="226px" height="340px"></a>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-sm-4">
+          <a href="https://www.ebay.co.uk/itm/224996404560"> <img src="https://imgur.com/xiMtys9.jpg" width="226px" height="340px"></a>
+        </div>
+        <div class="col-sm-4">
+          <a href="https://www.ebay.co.uk/itm/324169201352"> <img src="https://imgur.com/qYAilNH.jpg" width="226px" height="340px"></a>
+        </div>
+        <div class="col-sm-4">
+          <a href="https://www.ebay.co.uk/itm/325207091545"> <img src="https://imgur.com/kYje93v.jpg" width="226px" height="340px"></a>
+        </div>
+      </div>
+     </div>
+      <br><br><br>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3"><img src="https://www.ebaystoredesigns.co.uk/ebay/joe-browns/2021/images/returns.png" alt=""><span style="font-size:20px ;font-weight:500"> FREE UK RETURN</span></div>
+          <div class="col-sm-3"><img src="https://www.ebaystoredesigns.co.uk/ebay/joe-browns/2021/images/award.png" alt=""><span style="font-size:20px ;font-weight:500"> TOP RATED STYLES</span></div>
+          <div class="col-sm-3"><img src="https://www.ebaystoredesigns.co.uk/ebay/joe-browns/2021/images/secure.png" alt=""><span style="font-size:20px ;font-weight:500"> 100% PAYMENT SECURE</span></div>
+          <div class="col-sm-3"><img src="https://www.ebaystoredesigns.co.uk/ebay/joe-browns/2021/images/dress.png" alt=""><span style="font-size:20px ;font-weight:500"> UNIQUE STYLES</span></div>
+
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="container Newsletter">
+        <div class="row">
+          <div class="col-sm-8">
+            <h6 style="font-weight:800 ;">Add Our Store To Your Favourites & Receive Email Newsletters About New Items & Special Offers</h6>
+          </div>
+          <div class="col-sm-4">
+            <a href="#" style="    background-color: #B21E23;
+            padding: 13px 38px;
+            color: #fff !important;
+            font-weight: 700;
+            border-radius: 14px;">Sign Up</a>
+          </div>
+        </div>
+      </div>
+      <footer style="background-color:#F6F6F8 ;"><br>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <h5 style="text-align: center;">Catogries</h5>
+              <hr>
+              <p style="text-align: center;"><a href="https://www.ebay.co.uk/str/topnotchdenim?_sop=10" style="color:#918787;font-weight:600">New In</a></p>
+              <p style="text-align: center;"><a href="https://www.ebay.co.uk/str/topnotchdenim/Men/_i.html?_sacat=260012" style="color:#918787;font-weight:600">Men</a></p>
+
+              <p style="text-align: center;"><a href="https://www.ebay.co.uk/str/topnotchdenim/Women/_i.html?_sacat=260010" style="color:#918787;font-weight:600">Women</a></p>
+              <p style="text-align: center;"><a href="https://www.ebay.co.uk/str/topnotchdenim" style="color:#918787;font-weight:600">View All</a></p>
+
+            </div>
+            <div class="col-sm-4">
+              <h5 style="text-align: center;">Shop Pages</h5>
+              <hr>
+              <p style="text-align: center;"><a href="https://www.ebay.co.uk/str/topnotchdenim" style="color:#918787;font-weight:600">Visit Our Stores</a></p>
+              <p style="text-align: center;"><a href="#" style="color:#918787;font-weight:600">Shipping</a></p>
+
+              <p style="text-align: center;"><a href="#" style="color:#918787;font-weight:600">Return</a></p>
+              <p style="text-align: center;"><a href="#" style="color:#918787;font-weight:600">View Our Feedback</a></p>
+              <p style="text-align: center;"><a href="#" style="color:#918787;font-weight:600">Subscribe to our Newsletter</a></p>
+
+            </div>
+            <div class="col-sm-4">
+              <h5 style="text-align: center;">Customer Service</h5>
+              <hr>
+              <p style="text-align: center;"><a href="#" style="color:#918787;font-weight:600">Contact us</a></p>
+              
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-4">
+            <p style="font-weight:500">© 2022 Top Notch Denim</p>
+          </div>
+          <div class="col-sm-4">
+            <img src="assets/img/Screenshot_12.png" alt="">
+          </div>
+          <div class="col-sm-4">
+            <p style="text-align:end ;font-weight:500">eBay Shop Design by: AHB
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+      
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("demo");
+        let captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+      }
+
+      function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+
+      </script>
+
+      
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
